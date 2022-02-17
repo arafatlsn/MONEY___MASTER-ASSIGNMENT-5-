@@ -1,3 +1,4 @@
+// error handling multi used function 
 function errorHandling(inputField, error){
   if(isNaN(inputField.value) == false  && inputField.value >= 0 || inputField.value == ''){
     document.getElementById(error).style.display = 'none';
@@ -13,6 +14,7 @@ function errorHandling(inputField, error){
   }
 }
 
+// catch calculate button 
 // catch calculate button 
 document.getElementById('calculateButton').addEventListener('click', function(){
   const incomeInput = document.getElementById('incomeAmount');
@@ -32,46 +34,10 @@ document.getElementById('calculateButton').addEventListener('click', function(){
     document.getElementById('incomeError').style.display = 'none'
   }
   // food 
-  // if(isNaN(foodInput.value) == false  && foodInput.value >= 0 || foodInput.value == ''){
-  //   document.getElementById('foodError').style.display = 'none';
-  //   if(foodInput.value == ''){
-  //     foodInput.value = 0;
-  //   }
-  // }
-  // else if(isNaN(foodInput.value) || foodInput.value < 0){
-  //   document.getElementById('foodError').style.display = 'block';
-  //   showTotalExpenses.innerText = '';
-  //   showBalance.innerText = '';
-  //   return
-  // }
   errorHandling(foodInput, 'foodError')
   // rent 
-  // if(isNaN(rentInput.value) == false && rentInput.value >= 0 || rentInput.value == ''){
-  //   document.getElementById('rentError').style.display = 'none';
-  //   if(rentInput.value == ''){
-  //     rentInput.value = 0;
-  //   }
-  // }
-  // else if(isNaN(rentInput.value) || rentInput.value < 0){
-  //   document.getElementById('rentError').style.display = 'block';
-  //   showTotalExpenses.innerText = '';
-  //   showBalance.innerText = '';
-  //   return
-  // }
   errorHandling(rentInput, 'rentError')
   // clothes 
-  // if(isNaN(clothesInput.value) == false  && clothesInput.value >= 0 || clothesInput.value == ''){
-  //   document.getElementById('clothesError').style.display = 'none';
-  //   if(clothesInput.value == ''){
-  //     clothesInput.value = 0;
-  //   }
-  // }
-  // else if(isNaN(clothesInput.value) || clothesInput.value < 0){
-  //   document.getElementById('clothesError').style.display = 'block';
-  //   showTotalExpenses.innerText = '';
-  //   showBalance.innerText = '';
-  //   return
-  // }
   errorHandling(clothesInput, 'clothesError')
   // total & balance calculation 
   const totalExpenses = parseFloat(foodInput.value) + parseFloat(rentInput.value) + parseFloat(clothesInput.value);
@@ -84,6 +50,7 @@ document.getElementById('calculateButton').addEventListener('click', function(){
   else{
     document.getElementById('incomeSmallError').style.display = 'none';
   }
+
   showTotalExpenses.innerText = totalExpenses.toFixed(2);
   showBalance.innerText =  (parseFloat(incomeInput.value) - totalExpenses).toFixed(2);
   // enable save button 
