@@ -83,9 +83,11 @@ document.getElementById('saveButton').addEventListener('click', function(){
   const getSavingAmount = parseFloat(incomeInput.value) * (parseFloat(savingInput.value) / 100);
 
   // saving  error 
+  // insufficient saving error 
   if(parseFloat(showBalance.innerText) < getSavingAmount){
     showSaving.innerText = '';
     showRemaining.innerText = '';
+    document.getElementById('insufficientSavinErrorInner').innerText = savingInput.value + '%';
     document.getElementById('insufficientSavinError').style.display = 'block';
     return;
   }
