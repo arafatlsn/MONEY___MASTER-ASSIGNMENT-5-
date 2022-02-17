@@ -11,7 +11,7 @@ function errorHandling(inputField, error){
     document.getElementById(error).style.display = 'block';
     showTotalExpenses.innerText = '';
     showBalance.innerText = '';
-    return
+    // return
   }
 }
 
@@ -26,6 +26,8 @@ document.getElementById('calculateButton').addEventListener('click', function(){
   const showBalance = document.getElementById('balanceInner');
 
   // error handling
+  showTotalExpenses.innerText = '';
+  showBalance.innerText = '';
   // income handling
   if(isNaN(incomeInput.value) || incomeInput.value <= 0 || incomeInput.value == ''){
     document.getElementById('incomeError').style.display = 'block'
@@ -96,6 +98,11 @@ document.getElementById('saveButton').addEventListener('click', function(){
     document.getElementById('savingError').style.display = 'none';
   }
 // showing result 
+  if(isNaN(parseFloat(showBalance.innerText))){
+    showSaving.innerText = '';
+    showRemaining.innerText = '';
+    return
+  }
   showSaving.innerText = getSavingAmount.toFixed(2);
   showRemaining.innerText = (parseFloat(showBalance.innerText) - parseFloat(getSavingAmount)).toFixed(2)
 })
