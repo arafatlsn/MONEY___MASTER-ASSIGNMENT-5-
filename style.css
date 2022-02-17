@@ -135,7 +135,7 @@ input{
   color: #ed1c24;
   display: none;
   margin-top: .1rem;
-  /* margin-left: 6rem; */
+  margin-left: 6rem;
 }
 #incomeSmallError{
   font-size: 1.1rem;

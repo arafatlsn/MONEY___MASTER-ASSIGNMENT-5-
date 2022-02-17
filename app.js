@@ -35,7 +35,7 @@ document.getElementById('calculateButton').addEventListener('click', function(){
   }
   else{
     document.getElementById('incomeError').style.display = 'none'
-  }
+  };
   // used multi function 
   // food handling
   errorHandling(foodInput, 'foodError')
