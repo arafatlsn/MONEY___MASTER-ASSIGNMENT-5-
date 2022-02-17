@@ -1,4 +1,5 @@
 // error handling multi used function 
+// error handling multi used function 
 function errorHandling(inputField, error){
   if(isNaN(inputField.value) == false  && inputField.value >= 0 || inputField.value == ''){
     document.getElementById(error).style.display = 'none';
@@ -25,7 +26,7 @@ document.getElementById('calculateButton').addEventListener('click', function(){
   const showBalance = document.getElementById('balanceInner');
 
   // error handling
-  // income 
+  // income handling
   if(isNaN(incomeInput.value) || incomeInput.value <= 0 || incomeInput.value == ''){
     document.getElementById('incomeError').style.display = 'block'
     return
@@ -33,14 +34,16 @@ document.getElementById('calculateButton').addEventListener('click', function(){
   else{
     document.getElementById('incomeError').style.display = 'none'
   }
-  // food 
+  // used multi function 
+  // food handling
   errorHandling(foodInput, 'foodError')
-  // rent 
+  // rent handling
   errorHandling(rentInput, 'rentError')
-  // clothes 
+  // clothes handling
   errorHandling(clothesInput, 'clothesError')
   // total & balance calculation 
   const totalExpenses = parseFloat(foodInput.value) + parseFloat(rentInput.value) + parseFloat(clothesInput.value);
+  // total expenses over income handling 
   if(totalExpenses > incomeInput.value){
     document.getElementById('incomeSmallError').style.display = 'block';
     showTotalExpenses.innerText = '';
@@ -51,6 +54,7 @@ document.getElementById('calculateButton').addEventListener('click', function(){
     document.getElementById('incomeSmallError').style.display = 'none';
   }
 
+  // showing result 
   showTotalExpenses.innerText = totalExpenses.toFixed(2);
   showBalance.innerText =  (parseFloat(incomeInput.value) - totalExpenses).toFixed(2);
   // enable save button 
@@ -80,6 +84,7 @@ document.getElementById('saveButton').addEventListener('click', function(){
   else{
     document.getElementById('insufficientSavinError').style.display = 'none';
   }
+  // saving input string negative-number and empty string handling 
   if(isNaN(savingInput.value) || savingInput.value <= 0 || savingInput.value == ''){
     document.getElementById('savingError').style.display = 'block';
 
@@ -90,7 +95,7 @@ document.getElementById('saveButton').addEventListener('click', function(){
   else{
     document.getElementById('savingError').style.display = 'none';
   }
-
+// showing result 
   showSaving.innerText = getSavingAmount.toFixed(2);
   showRemaining.innerText = (parseFloat(showBalance.innerText) - parseFloat(getSavingAmount)).toFixed(2)
 })

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nagad Banking</title>
   <!-- shortcut icon  -->
-  <link rel="shortcut icon" href="images/Money_-_Pictures_of_Money--Flickr_flickr.com--photos--pictures-of-money--17123251389.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="images/image-edited.jpeg" type="image/x-icon">
   <!-- css link -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="mobile-responsive.css">
@@ -37,7 +37,7 @@
         </div>
         <!-- spending amount  -->
         <div class="spending-class">
-          <h1>Expense</h1>
+          <h1>Expenses</h1>
           <!-- food for  -->
           <div class="food-div spending-div">
             <label for="foodFor">Food:</label>
@@ -56,24 +56,30 @@
             <input class="top-input-field" type="text" name="clothesFor" id="clothesFor">
             <p id="clothesError">please type number, minimum 0</p>
           </div>
+          <!-- calculate button  -->
           <div class="calculate-div">
             <button id="calculateButton" type="submit">Calculate</button>
           </div>
       </div>
+      <!-- total expenses  -->
         <div>
           <h2 id="totalExpense">Total Expenses : <span id="totalExpensesInner">00</span></h2>
+          <!-- balance  -->
           <h2 id="balance">Balance: <span id="balanceInner">00</span></h2>
           <p id="insufficientSavinError">Your Balance Insufficient For <span id="insufficientSavinErrorInner"></span> savings</p>
         </div>
+        <!-- saving field  -->
         <div class="saving-field">
           <div>
             <label for="saveFor">Save:</label>
             <input id="savingInput" type="text" name="saveFor" id="saveFor" value="10">
             <span id="percantageSign">%</span>
+            <!-- saving button  -->
             <button id="saveButton" type="submit" disabled>Save</button>
             <p id="savingError">please type number, minimum 1</p>
           </div>
           <div>
+            <!-- saving amount area  -->
             <h2 id="savingAmountText">Saving Amount: <span id="savingInner">000</span></h2>
             <h2 id="remainingText">Remaining Balance: <span id="remainingInner">000</span></h2>
           </div>
