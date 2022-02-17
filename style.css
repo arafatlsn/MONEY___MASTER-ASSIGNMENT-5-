@@ -1,0 +1,186 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+}
+/* header part  */
+header{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+
+}
+#head-Name{
+  font-size: 2.5rem;
+  margin-right: 15px;
+}
+
+/* main part  */
+/* No. 1 section  */
+
+.main-section{
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-gap: 3rem;
+}
+.grid-column-two{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fffaf0;
+}
+.income-class{
+  margin: 1.3rem 0 ;
+  font-size: 1.3rem;
+}
+.income-class h1{
+  text-align: center;
+  padding: 1rem 0;
+}
+.spending-class{
+  display: flex;
+  flex-direction: column;
+  margin: 1.3rem 0;
+  font-size: 1.3rem;
+}
+.spending-class h1{
+  text-align: center;
+  padding: 1rem 0;
+}
+.food-div{
+  margin-left: 1.5rem;
+}
+.rent-div{
+  margin-left: 1.7rem;
+}
+.spending-div{
+  padding: .5rem 0;
+}
+.calculate-div{
+  margin-left: 7.5rem;
+  padding: 3rem 0;
+}
+.top-input-field{
+  padding: .7rem 1rem;
+}
+.grid-column-two label{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+input{
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-style: hidden;
+  background-color : #d1d1d1;
+}
+#calculateButton{
+  padding: .6rem 2rem;
+  font-size: 1.3rem;
+  border-radius: .4rem;
+  font-weight: 700;
+  color: #0000cd;
+  background-color: #ffffe0;
+}
+/* calculate result */
+#totalExpense{
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: .7rem;
+}
+#balance{
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/* saving field  */
+.saving-field{
+  padding-top: 2rem;
+}
+#savingInput{
+  padding: .7rem 1rem;
+  width: 4rem;
+}
+#percantageSign{
+  font-size: 1.7rem;
+}
+#saveButton{
+  padding: .6rem 2rem;
+  font-size: 1.3rem;
+  border-radius: .4rem;
+  font-weight: 700;
+  color: #0000cd;
+  background-color: #ffffe0;
+}
+#savingAmountText{
+  text-align: center;
+  margin-top: 1rem;
+  padding: .3rem 0;
+  font-size: 1.6rem;
+}
+#remainingText{
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+/* error handling */
+#incomeError{
+  font-size: 1.1rem;
+  text-decoration: underline;
+  color: #ed1c24;
+  display: none;
+  margin-top: .1rem;
+  /* margin-left: 6rem; */
+}
+#incomeSmallError{
+  font-size: 1.1rem;
+  text-decoration: underline;
+  color: #ed1c24;
+  display: none;
+  margin-top: .1rem;
+  margin-left: 6rem;
+}
+#foodError{
+  font-size: 1.1rem;
+  text-decoration: underline;
+  color: #ed1c24;
+  display: none;
+  margin-top: .1rem;
+  margin-left: 4.5rem;
+}
+#rentError{
+  font-size: 1.1rem;
+  text-decoration: underline;
+  color: #ed1c24;
+  display: none;
+  margin-top: .1rem;
+  margin-left: 4.2rem;
+}
+#clothesError{
+  font-size: 1.1rem;
+  text-decoration: underline;
+  color: #ed1c24;
+  display: none;
+  margin-top: .1rem;
+  margin-left: 6rem;
+}
+#savingError{
+  font-size: 1.1rem;
+  text-decoration: underline;
+  color: #ed1c24;
+  display: none;
+  margin-top: .1rem;
+  margin-left: 4rem;
+}
+#insufficientSavinError{
+  font-size: 1.1rem;
+  text-decoration: underline;
+  color: #ed1c24;
+  display: none;
+  margin-top: .1rem;
+}

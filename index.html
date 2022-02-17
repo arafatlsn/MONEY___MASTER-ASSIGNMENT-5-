@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money - Master</title>
+  <!-- shortcut icon  -->
+  <link rel="shortcut icon" href="images/Money_-_Pictures_of_Money--Flickr_flickr.com--photos--pictures-of-money--17123251389.jpg" type="image/x-icon">
+  <!-- css link -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile-responsive.css">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  <header>
+    <h1 id="head-Name">Nagad Banking </h1>
+    <img width="35px" src="images/building-columns-solid.svg" alt="">
+  </header>
+
+  <main>
+    <section class="main-section">
+      <div class="grid-column-one">
+        <img width="100%" src="images/image-edited.jpeg" alt="">
+      </div>
+      <div class="grid-column-two">
+        <!-- income amount  -->
+        <div class="income-class">
+          <h1>Income</h1>
+          <label for="incomeAmount">Income:</label>
+          <input class="top-input-field" type="text" name="incomeAmount" id="incomeAmount">
+          <p id="incomeError">please type number, minimum 1</p>
+          <p id="incomeSmallError">Your income Small than your Expense</p>
+        </div>
+        <!-- spending amount  -->
+        <div class="spending-class">
+          <h1>Expense</h1>
+          <!-- food for  -->
+          <div class="food-div spending-div">
+            <label for="foodFor">Food:</label>
+            <input class="top-input-field" type="text" name="foodFor" id="foodFor">
+            <p id="foodError">please type number, minimum 0</p>
+          </div>
+          <!-- rent for  -->
+          <div class="rent-div spending-div">
+            <label for="rentFor">Rent:</label>
+            <input class="top-input-field" type="text" name="rentFor" id="rentFor">
+            <p id="rentError">please type number, minimum 0</p>
+          </div>
+          <!-- clothes for  -->
+          <div class="clothes-div spending-div">
+            <label for="clothesFor">Clothes:</label>
+            <input class="top-input-field" type="text" name="clothesFor" id="clothesFor">
+            <p id="clothesError">please type number, minimum 0</p>
+          </div>
+          <div class="calculate-div">
+            <button id="calculateButton" type="submit">Calculate</button>
+          </div>
+      </div>
+        <div>
+          <h2 id="totalExpense">Total Expenses : <span id="totalExpensesInner">00</span></h2>
+          <h2 id="balance">Balance: <span id="balanceInner">00</span></h2>
+          <p id="insufficientSavinError">Your Balance Insufficient For <span id="insufficientSavinErrorInner"></span> savings</p>
+        </div>
+        <div class="saving-field">
+          <div>
+            <label for="saveFor">Save:</label>
+            <input id="savingInput" type="text" name="saveFor" id="saveFor" value="10">
+            <span id="percantageSign">%</span>
+            <button id="saveButton" type="submit" disabled>Save</button>
+            <p id="savingError">please type number, minimum 1</p>
+          </div>
+          <div>
+            <h2 id="savingAmountText">Saving Amount: <span id="savingInner">000</span></h2>
+            <h2 id="remainingText">Remaining Balance: <span id="remainingInner">000</span></h2>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

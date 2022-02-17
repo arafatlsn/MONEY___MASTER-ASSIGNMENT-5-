@@ -1,0 +1,68 @@
+@media screen and (max-width: 480px){
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  header{
+    width: 100%;
+    flex-direction: column;
+    margin: 1.3rem 0;
+    padding: 0;
+  }
+  header img{
+    width: 3rem;
+    display: block;
+    margin: auto;
+  }
+  #head-Name{
+    order: 1;
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  .main-section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+  }
+  .grid-column-two{
+    align-items: bottom;
+  }
+  .calculate-div{
+    margin: 0;
+  }
+  .food-div{
+    margin: 0;
+  }
+  .rent-div{
+    margin: 0;
+  }
+  #calculateButton{
+    margin: 0;
+  }
+
+  /* error handling */
+  #incomeError{
+    margin: 0;
+  }
+  #incomeSmallError{
+    margin: 0;
+  }
+  #foodError{
+    margin: 0;
+  }
+  #rentError{
+    margin: 0;
+  }
+  #clothesError{
+    margin: 0;
+  }
+  #savingError{
+    margin: 0;
+  }
+  #insufficientSavinError{
+    margin: 0;
+  }
+}
